@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black text-white px-6 md:px-16 lg:px-24">
+    <div className="sticky top-0 z-50 bg-black text-white px-6 md:px-16 lg:px-24 shadow-lg">
       <div className="container py-4 flex justify-between items-center">
         <div className="text-2xl font-bold">Tejas</div>
         <div className="md:hidden" onClick={toggleMenu}>
@@ -20,6 +20,7 @@ const Navbar = () => {
             <FaBars className="text-2xl" />
           )}
         </div>
+        {/* Desktop Menu */}
         <div className={`space-x-6 hidden md:flex`}>
           <a href="#" className="hover:text-gray-50">
             Home
@@ -37,6 +38,7 @@ const Navbar = () => {
             Contact
           </a>
         </div>
+        {/* Social Links */}
         <div className="space-x-4 flex items-center">
           <a
             href="https://leetcode.com/u/tejasacharya078/"
@@ -64,6 +66,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
+      {/* Mobile Menu */}
       <div
         className={`${
           isOpen ? "block" : "hidden"

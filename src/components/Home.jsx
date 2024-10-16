@@ -1,23 +1,15 @@
 import React from "react";
-import {
-  FaLinkedin,
-  FaGithub,
-  FaMapMarkerAlt,
-  FaFileAlt,
-} from "react-icons/fa"; // LinkedIn, GitHub, Location, and Resume icons
-import profileImage from "../assets/profileImage.png"; // Adjust the path as needed
+import { FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
+import profileImage from "../assets/profileImage.png";
 
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-white text-center">
-      {/* Text Section */}
       <h1 className="text-3xl font-semibold">MY NAME IS TEJAS</h1>
-      <p className="text-lg text-gray-500 mt-2">Multidisciplinary Engineer</p>
+      <p className="text-lg text-gray-500 mt-2">MULTIDISCIPLINARY ENGINEER</p>
       <p className="text-sm text-gray-400 mt-1 flex items-center justify-center">
         Based in Bangalore <FaMapMarkerAlt className="ml-2 text-red-500" />
       </p>
-
-      {/* Profile Image */}
       <div className="mt-6">
         <img
           src={profileImage}
@@ -26,7 +18,6 @@ const Home = () => {
         />
       </div>
 
-      {/* Social Icons */}
       <div className="mt-6 flex space-x-6">
         <a
           href="https://www.linkedin.com/in/tejastr888/"
