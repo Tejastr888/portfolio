@@ -12,7 +12,6 @@ const Navbar = () => {
   return (
     <div className="sticky top-0 z-50 bg-black text-white px-6 md:px-16 lg:px-24 shadow-lg">
       <div className="container py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">Tejas</div>
         <div className="md:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <FaTimes className="text-2xl" />
