@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaGithub, FaLink } from "react-icons/fa";
+import { FaGithub, FaLink, FaHeart } from "react-icons/fa";
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
@@ -31,11 +31,12 @@ const Projects = () => {
             className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
           >
             <h3 className="text-xl font-semibold mb-2">{repo.name}</h3>
-            <p className="text-gray-600 text-sm mb-4">
-              {repo.description
-                ? repo.description
-                : "No description available."}
-            </p>
+
+            {/* Conditionally render description only if available */}
+            {repo.description && (
+              <p className="text-gray-600 text-sm mb-4">{repo.description}</p>
+            )}
+
             <div className="flex items-center justify-between mt-4">
               <a
                 href={repo.html_url}
@@ -45,15 +46,24 @@ const Projects = () => {
               >
                 <FaGithub className="mr-2" /> GitHub Repo
               </a>
+
+              {/* Conditionally render Live Demo link and Like button if the repo has a homepage */}
               {repo.homepage && (
-                <a
-                  href={repo.homepage}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-green-600 hover:text-green-500 flex items-center"
-                >
-                  <FaLink className="mr-2" /> Live Demo
-                </a>
+                <div className="flex items-center space-x-4">
+                  <a
+                    href={repo.homepage}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-600 hover:text-green-500 flex items-center"
+                  >
+                    <FaLink className="mr-2" /> Live Demo
+                  </a>
+
+                  {/* Like Button */}
+                  <button className="text-red-500 hover:text-red-400 focus:outline-none">
+                    <FaHeart className="mr-1" />
+                  </button>
+                </div>
               )}
             </div>
           </div>
