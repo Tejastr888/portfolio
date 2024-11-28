@@ -1,11 +1,14 @@
 import React from "react";
 import Stats from "./Stats";
 import resume from "../assets/pdf/resume.pdf";
+import Experience from "./Experience.jsx";
+
 
 const About = () => {
   return (
     <>
       <Stats />
+      <Experience/>
       <div className="bg-white py-16">
         <div className="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center">
           {/* Left side content */}
