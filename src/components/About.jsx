@@ -21,11 +21,8 @@ const About = () => {
               including full-stack development, cloud computing, and AI-driven
               technologies.
               <br />
-              I’m passionate about creating impactful solutions, continuously
-              expanding my knowledge, and staying up-to-date with the latest
-              tech trends. Whether it’s solving complex problems, writing clean
-              code, or collaborating with a team, I’m dedicated to delivering
-              high-quality results.
+              I am very keen programming and software development. Right now I am able to build full stack applications using Java, react, spring boot, and postgresql ...etc.
+              additionally have also been using tools like docker, Intellijidea IDE for development of applications and API Endpoints. I want do more of this.
             </p>
             <p className="text-lg text-gray-600 mt-4">
               I enjoy tackling new challenges and contributing my skills to

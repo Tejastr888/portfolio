@@ -5,18 +5,16 @@ import profileImage from "../assets/profileImage.png";
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-900 via-black to-gray-900 text-center text-white">
-      {/* Animated Title */}
       <h1 className="text-4xl font-bold mb-2 animate-fadeInDown">
-        MY NAME IS <span className="text-red-300">TEJAS</span>
+      Hi 👋, I'm  <span className="text-red-300">Tejas</span>
       </h1>
       <p className="text-lg text-gray-200 mt-2 animate-fadeInUp">
-        MULTIDISCIPLINARY ENGINEER
+        Full Stack Engineer
       </p>
       <p className="text-sm text-gray-400 mt-1 flex items-center justify-center animate-fadeInUp delay-1">
-        Based in Bangalore <FaMapMarkerAlt className="ml-2 text-red-500" />
+        Based in India <FaMapMarkerAlt className="ml-2 text-red-500" />
       </p>
 
-      {/* Profile Image with Hover Effect */}
       <div className="mt-6">
         <img
           src={profileImage}
@@ -25,7 +23,6 @@ const Home = () => {
         />
       </div>
 
-      {/* Social Links with Hover Effect */}
       <div className="mt-6 flex space-x-8 animate-fadeInUp delay-2">
         <a
           href="https://www.linkedin.com/in/tejastr888/"
