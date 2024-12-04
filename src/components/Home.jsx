@@ -1,4 +1,3 @@
-import React from "react";
 import { FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
 import profileImage from "../assets/profileImage.png";
 
@@ -6,7 +5,7 @@ const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-900 via-black to-gray-900 text-center text-white">
       <h1 className="text-4xl font-bold mb-2 animate-fadeInDown">
-      Hi 👋, I'm  <span className="text-red-300">Tejas</span>
+        Hi 👋, I&apos;m <span className="text-red-300">Tejas</span>
       </h1>
       <p className="text-lg text-gray-200 mt-2 animate-fadeInUp">
         Full Stack Engineer
@@ -39,6 +38,14 @@ const Home = () => {
           className="text-gray-200 hover:text-gray-500 text-3xl transition-transform transform hover:scale-125 duration-300"
         >
           <FaGithub />
+        </a>
+        <a
+          href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=tejastr888"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col justify-center px-4 py-2 text-center outline-none text-white no-underline w-48 h-8 rounded-full bg-blue-600 font-sans hover:bg-green-500 transition-transform transform hover:scale-110 duration-300"
+        >
+          Follow on LinkedIn
         </a>
       </div>
     </div>
