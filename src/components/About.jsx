@@ -21,8 +21,7 @@ const About = () => {
               including full-stack development, cloud computing, and AI-driven
               technologies.
               <br />
-              I am very keen programming and software development. Right now I am able to build full stack applications using Java, react, spring boot, and postgresql ...etc.
-              additionally have also been using tools like docker, Intellijidea IDE for development of applications and API Endpoints. I want do more of this.
+              I am highly focused on programming and software development, capable of building efficient full-stack applications using technologies like Java, React, Spring Boot, and PostgreSQL. Additionally, I utilize tools such as Docker and IntelliJ IDEA to develop applications and API endpoints effectively. I aim to further enhance my skills and contribute to meaningful projects in this domain.
             </p>
             <p className="text-lg text-gray-600 mt-4">
               I enjoy tackling new challenges and contributing my skills to
