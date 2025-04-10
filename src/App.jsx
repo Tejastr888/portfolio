@@ -4,19 +4,21 @@ import Footer from "./components/Footer.jsx";
 import Home from "./components/Home.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Projects from "./components/Projects.jsx";
-
+import ScrollToTop from "./components/ScrollToTop.jsx";
+import { ThemeProvider } from "./utils/ThemeContext.jsx";
 
 function App() {
   return (
-    <>
-      <div className="App">
+    <ThemeProvider>
+      <div className="App dark:bg-background-dark transition-colors duration-300">
         <Navbar />
         <Home />
         <About />
         <Projects />
         <Footer />
+        <ScrollToTop />
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 

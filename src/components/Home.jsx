@@ -1,52 +1,106 @@
-import { FaLinkedin, FaGithub, FaMapMarkerAlt } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaCode, FaServer, FaCloud } from "react-icons/fa";
+import { useTheme } from "../utils/ThemeContext";
 import profileImage from "../assets/profileImage.png";
 
 const Home = () => {
+  const { darkMode } = useTheme();
+
+  const skills = [
+    { name: "Full Stack Development", icon: FaCode },
+    { name: "Backend Engineering", icon: FaServer },
+    { name: "Cloud Computing", icon: FaCloud },
+  ];
+
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-blue-900 via-black to-gray-900 text-center text-white">
-      <h1 className="text-4xl font-bold mb-2 animate-fadeInDown">
-        Hi 👋, I&apos;m <span className="text-red-300">Tejas</span>
-      </h1>
-      <p className="text-lg text-gray-200 mt-2 animate-fadeInUp">
-        Full Stack Engineer
-      </p>
-      <p className="text-sm text-gray-400 mt-1 flex items-center justify-center animate-fadeInUp delay-1">
-        Based in India <FaMapMarkerAlt className="ml-2 text-red-500" />
-      </p>
+    <div className={`min-h-screen flex items-center justify-center ${
+      darkMode 
+        ? 'bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900' 
+        : 'bg-gradient-to-r from-blue-50 via-white to-blue-50'
+    } transition-colors duration-300`}>
+      <div className="container mx-auto px-6 py-20 md:py-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Text Content */}
+          <div className="space-y-6 text-center md:text-left">
+            <h1 className={`text-4xl md:text-6xl font-bold ${
+              darkMode ? 'text-white' : 'text-gray-900'
+            } animate-fadeInDown`}>
+              Hi 👋, I&apos;m <span className="text-blue-500">Tejas</span>
+            </h1>
+            
+            {/* Animated Skills List */}
+            <div className="space-y-4">
+              {skills.map((skill, index) => {
+                const Icon = skill.icon;
+                return (
+                  <div 
+                    key={index}
+                    className={`flex items-center justify-center md:justify-start space-x-2 ${
+                      darkMode ? 'text-gray-300' : 'text-gray-700'
+                    } animate-fadeInUp`}
+                    style={{ animationDelay: `${index * 200}ms` }}
+                  >
+                    <Icon className="text-blue-500" />
+                    <span>{skill.name}</span>
+                  </div>
+                );
+              })}
+            </div>
 
-      <div className="mt-6">
-        <img
-          src={profileImage}
-          alt="Profile"
-          className="w-40 h-40 rounded-full object-cover border-4 border-gray-400 shadow-xl transition-transform transform hover:scale-110 duration-300"
-        />
-      </div>
+            {/* Social Links */}
+            <div className="flex justify-center md:justify-start space-x-6 animate-fadeInUp" style={{ animationDelay: '600ms' }}>
+              <a
+                href="https://www.linkedin.com/in/tejastr888/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-3xl transition-transform hover:scale-110 ${
+                  darkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-500'
+                }`}
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://github.com/Tejastr888"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`text-3xl transition-transform hover:scale-110 ${
+                  darkMode ? 'text-gray-400 hover:text-gray-300' : 'text-gray-700 hover:text-gray-600'
+                }`}
+              >
+                <FaGithub />
+              </a>
+            </div>
 
-      <div className="mt-6 flex space-x-8 animate-fadeInUp delay-2">
-        <a
-          href="https://www.linkedin.com/in/tejastr888/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-blue-500 hover:text-blue-300 text-3xl transition-transform transform hover:scale-125 duration-300"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="https://github.com/Tejastr888"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-200 hover:text-gray-500 text-3xl transition-transform transform hover:scale-125 duration-300"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=tejastr888"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col justify-center px-4 py-2 text-center outline-none text-white no-underline w-48 h-8 rounded-full bg-blue-600 font-sans hover:bg-green-500 transition-transform transform hover:scale-110 duration-300"
-        >
-          Follow on LinkedIn
-        </a>
+            {/* CTA Button */}
+            <div className="animate-fadeInUp" style={{ animationDelay: '800ms' }}>
+              <a
+                href="#projects"
+                className={`inline-block px-8 py-3 rounded-full font-semibold transition-all transform hover:scale-105 ${
+                  darkMode
+                    ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                    : 'bg-blue-500 hover:bg-blue-600 text-white'
+                }`}
+              >
+                View My Work
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column - Profile Image */}
+          <div className="flex justify-center md:justify-end">
+            <div className={`relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden ${
+              darkMode ? 'ring-4 ring-blue-500/50' : 'ring-4 ring-blue-300/50'
+            } shadow-2xl transition-transform transform hover:scale-105 animate-fadeInUp`}>
+              <img
+                src={profileImage}
+                alt="Profile"
+                className="w-full h-full object-cover"
+              />
+              <div className={`absolute inset-0 ${
+                darkMode ? 'bg-blue-500/10' : 'bg-blue-300/10'
+              } transition-colors duration-300`}></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
