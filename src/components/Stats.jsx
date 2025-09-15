@@ -35,19 +35,19 @@ const Stats = () => {
   ];
 
   return (
-    <div className={`py-24 sm:py-32 ${darkMode ? 'bg-gray-900' : 'bg-gray-50'} transition-colors duration-300`}>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:max-w-none">
-          <div className="text-center mb-16">
-            <h2 className={`text-3xl font-bold tracking-tight ${darkMode ? 'text-white' : 'text-gray-900'} sm:text-4xl`}>
-              Achievements & Milestones
+    <div className={`py-24 ${darkMode ? 'bg-black' : 'bg-white'} transition-colors duration-300`}>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="mx-auto">
+          <div className="text-center mb-20">
+            <h2 className={`text-3xl font-medium tracking-tight ${darkMode ? 'text-white' : 'text-black'}`}>
+              Stats
             </h2>
-            <p className={`mt-4 text-lg leading-8 ${darkMode ? 'text-gray-300' : 'text-gray-600'}`}>
-              Key metrics from my journey in software development
+            <p className={`mt-4 text-sm tracking-wider uppercase ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+              Development Journey in Numbers
             </p>
           </div>
           
-          <dl className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <dl className="grid grid-cols-1 gap-12 sm:grid-cols-3">
             {stats.map((stat) => {
               const Icon = stat.icon;
               return (

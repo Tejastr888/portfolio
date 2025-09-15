@@ -1,55 +1,63 @@
-const data = {
-    work: [
-        {
-            id: 1,
-            company: "Rendered Ideas",
-            role: "Game Developer",
-            duration: "Jul 2023 - Jan 2024",
-            description: [
-                "Developed Games Using Java and BrightScript for a Roku Streaming Platform service process with multiple channel integrations.",
-                "Debugging and implementing game mechanics understanding the limitations of the device programming for memory and computation efficiency",
-                "Implemented efficient memory management techniques resulting in 30% performance improvement",
-                "Collaborated with cross-functional teams to deliver high-quality gaming experiences"
-            ],
-        },
-        {
-            id: 2,
-            company: "TR",
-            role: "Web Developer",
-            duration: "Apr 2022 - Jun 2023",
-            description: [
-                "Built responsive websites using JavaScript, HTML, and CSS with modern frameworks",
-                "Developed full-stack web applications using React and Python, improving user engagement by 40%",
-                "Implemented RESTful APIs and managed database operations",
-                "Collaborated with UI/UX designers to implement responsive designs"
-            ],
-        }
-    ],
-    education: [
-        {
-            id: 1,
-            institution: "Global Academy of Technology",
-            degree: "B.E in Mechanical Engineering",
-            duration: "May 2018 - May 2021",
-            description: [
-                "Worked on projects and implementation of engineering in solving technical problems and building applications",
-                "Design and development using SolidWorks, CATIA, GD&T and ANSYS",
-                "Led a team of 4 in developing an automated manufacturing process simulation"
-            ],
-        },
-        {
-            id: 2,
-            institution: "AWS re/Start Program",
-            degree: "Cloud Computing Certification",
-            duration: "2024",
-            description: [
-                "Completed comprehensive training in AWS cloud computing services and solutions",
-                "Hands-on experience with EC2, S3, Lambda, and other AWS services",
-                "Developed projects implementing cloud infrastructure and security best practices",
-                "Earned AWS Cloud Practitioner certification"
-            ],
-        }
-    ],
-};
+export default {
+  work: [
+    {
+      title: "Software Development Engineer Intern",
+      company: "4necotech",
+      duration: "Jul 2025 – Present",
+      location: "Bengaluru, Karnataka",
+      details: [
+        "Architected and developed full-stack MERN applications serving 8,000+ active users with 99.8% uptime",
+        "Built Teevo design tool with Three.js for real-time 3D T-shirt customization at 60+ FPS",
+        "Implemented API rate-limiting middleware reducing server load by 45%, handling 50,000+ daily requests",
+        "Created e-commerce storefronts with payment gateways and inventory management, boosting conversion by 28%",
+        "Optimized MongoDB schemas with strategic indexing, improving query performance by 55%",
+      ],
+    },
+    {
+      title: "Game Developer Level 1",
+      company: "Rendered Ideas Softgame Pvt Ltd",
+      duration: "Sep 2023 – Jan 2024",
+      location: "Bengaluru, Karnataka",
+      details: [
+        "Developed Roku games in BrightScript and libGDX, earning 45,000+ downloads and a 4.3+ rating",
+        "Built “Road Cross” and “Mission Destruction” with optimized game loops and collision detection at 60 FPS",
+        "Instrumented Java/SQL analytics tracking 20+ KPIs, boosting retention by 32%",
+        "Analyzed gameplay data with PostgreSQL to inform feature development, increasing in-app purchases by 25%",
+        "Enhanced performance via efficient memory management, reducing startup times by 40%",
+      ],
+    },
+    {
+      title: "Freelance Web Developer",
+      company: "Fiverr Platform",
+      duration: "Feb 2023 – Jul 2025",
+      location: "Remote",
+      details: [
+        "Delivered 50+ responsive web apps (React.js/Node.js) for international clients with 5★ satisfaction",
+        "Wrote Python scripts for batch video compression, cutting processing time by 60%",
+        "Built custom e-commerce and portfolio sites with analytics dashboards",
+        "Maintained 100% client satisfaction through high-quality code and timely delivery",
+      ],
+    },
+  ],
 
-export default data;
+  education: [
+    {
+      title: "Bachelor of Engineering in Mechanical Engineering",
+      institution: "Global Academy of Technology, VTU",
+      duration: "2018 – 2021",
+      grade: "CGPA: 7.82/10.0",
+    },
+    {
+      title: "Diploma in Engineering",
+      institution: "APS Polytechnic",
+      duration: "2015 – 2018",
+      grade: "Percentage: 73%",
+    },
+    {
+      title: "Secondary School Certificate (SSLC)",
+      institution: "NKS English High School, KSSEB",
+      duration: "2015",
+      grade: "Percentage: 74.84%",
+    },
+  ],
+};

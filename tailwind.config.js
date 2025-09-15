@@ -4,26 +4,34 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      letterSpacing: {
+        'wider': '.08em',
+        'widest': '.12em',
+      },
       colors: {
         primary: {
-          light: '#60A5FA',
-          dark: '#2563EB',
+          light: '#000000',
+          dark: '#FFFFFF',
         },
         secondary: {
-          light: '#F59E0B',
-          dark: '#D97706',
+          light: '#404040',
+          dark: '#D4D4D4',
         },
         background: {
           light: '#FFFFFF',
-          dark: '#111827',
+          dark: '#000000',
         },
         surface: {
-          light: '#F3F4F6',
-          dark: '#1F2937',
+          light: '#F5F5F5',
+          dark: '#171717',
         },
         text: {
-          light: '#1F2937',
-          dark: '#F9FAFB',
+          light: '#171717',
+          dark: '#F5F5F5',
         }
       },
     },
