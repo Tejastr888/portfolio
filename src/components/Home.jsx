@@ -47,7 +47,7 @@ const Home = () => {
           <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
             {/* Reduced heading size and margin */}
             <h1 className="text-4xl sm:text-5xl font-bold mb-4 animate-fadeInDown">
-              Hi 👋, I'm {PERSONAL_INFO.name}
+              Hi 👋, I&apos;m {PERSONAL_INFO.name}
             </h1>
 
             {/* Reduced paragraph size and margin */}
