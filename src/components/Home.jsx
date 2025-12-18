@@ -33,110 +33,84 @@ const Home = () => {
   };
 
   return (
-    // Section now has padding to create space from the navbar and footer
     <section
       id="home"
       className={`transition-colors duration-300 ${
         darkMode ? "bg-black text-white" : "bg-white text-black"
-      } py-24 sm:py-32`}
+      } py-32 sm:py-40 min-h-screen flex items-center`}
     >
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-        {/* Main Hero Section with reduced gap */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column: Text Content */}
-          <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-            {/* Reduced heading size and margin */}
-            <h1 className="text-4xl sm:text-5xl font-bold mb-4 animate-fadeInDown">
-              Hi 👋, I&apos;m {PERSONAL_INFO.name}
+      <div className="w-full max-w-4xl mx-auto px-6 sm:px-8">
+        <div className="flex flex-col items-center justify-center text-center space-y-12">
+          {/* Hero Content */}
+          <div className="space-y-6 animate-fadeInDown">
+            <h1 className="text-6xl sm:text-7xl font-light tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              {PERSONAL_INFO.name}
             </h1>
-
-            {/* Reduced paragraph size and margin */}
-            <p
-              className="text-base sm:text-lg max-w-[60ch] font-light leading-relaxed mb-6 animate-fadeInUp"
-              style={{ animationDelay: "200ms" }}
-            >
-              Software Development Engineer crafting digital experiences through
-              full-stack development, cloud solutions, and innovative
-              technologies.
+            <p className="text-xl sm:text-2xl font-light opacity-70 max-w-2xl">
+              Software Development Engineer crafting digital experiences
             </p>
-
-            {/* Reduced icon size and margin */}
-            <div
-              className="flex justify-center lg:justify-start space-x-5 mb-6 animate-fadeInUp"
-              style={{ animationDelay: "400ms" }}
-            >
-              <a
-                href={PERSONAL_INFO.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl transition-transform hover:scale-110 hover:text-blue-500"
-              >
-                <FaLinkedin />
-              </a>
-              <a
-                href={PERSONAL_INFO.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl transition-transform hover:scale-110 hover:text-gray-500"
-              >
-                <FaGithub />
-              </a>
-            </div>
-
-            {/* Reduced button size */}
-            <div
-              className="animate-fadeInUp"
-              style={{ animationDelay: "600ms" }}
-            >
-              <a
-                href="#projects"
-                className={`inline-flex items-center justify-center px-6 py-2 rounded-md font-semibold text-sm transition-all transform hover:scale-105 ${
-                  darkMode
-                    ? "bg-blue-600 hover:bg-blue-700 text-white"
-                    : "bg-blue-500 hover:bg-blue-600 text-white"
-                }`}
-              >
-                View My Work
-              </a>
-            </div>
+            <p className="text-lg opacity-60 max-w-xl">
+              Full-stack development • Cloud solutions •{" "}
+              <span className="text-cyan-400 font-medium">
+                Innovative technologies
+              </span>
+            </p>
           </div>
 
-          {/* Right Column: Profile Image (Further Reduced Size) */}
-          <div className="flex justify-center lg:justify-end animate-fadeInUp">
-            <div
-              className={`relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden shadow-xl transition-all duration-300 transform hover:scale-105 ${
-                darkMode ? "ring-2 ring-blue-500/50" : "ring-2 ring-blue-300/50"
+          {/* Social Links */}
+          <div
+            className="flex justify-center space-x-8 animate-fadeInUp"
+            style={{ animationDelay: "200ms" }}
+          >
+            <a
+              href={PERSONAL_INFO.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl transition-all duration-300 hover:scale-125 hover:-translate-y-1 opacity-80 hover:opacity-100"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href={PERSONAL_INFO.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl transition-all duration-300 hover:scale-125 hover:-translate-y-1 opacity-80 hover:opacity-100"
+            >
+              <FaGithub />
+            </a>
+          </div>
+
+          {/* CTA Button */}
+          <div className="animate-fadeInUp" style={{ animationDelay: "400ms" }}>
+            <a
+              href="#projects"
+              className={`inline-block px-8 py-3 border-2 font-light tracking-wide transition-all duration-300 hover:scale-105 ${
+                darkMode
+                  ? "border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-black"
+                  : "border-cyan-500 text-cyan-600 hover:bg-cyan-500 hover:text-white"
               }`}
             >
-              <img
-                src={profileImage}
-                alt={`${PERSONAL_INFO.name} - Software Developer`}
-                className="w-full h-full object-cover"
-              />
-            </div>
+              View Work
+            </a>
           </div>
-        </div>
 
-        {/* Compacted Skills Grid */}
-        <div className="max-w-7xl mx-auto grid grid-cols-4 sm:grid-cols-8 gap-4 mt-28">
-          {PERSONAL_INFO.skills.slice(0, 8).map((skill, index) => {
-            const Icon = iconMap[skill.icon];
-            return (
-              <div
-                key={index}
-                className={`flex flex-col items-center justify-center text-center p-3 rounded-lg transition-all duration-300 animate-fadeInUp ${
-                  darkMode
-                    ? "bg-gray-900/50 hover:bg-gray-800/70"
-                    : "bg-gray-100/50 hover:bg-gray-200/70"
-                }`}
-                style={{ animationDelay: `${index * 100 + 800}ms` }}
-              >
-                {/* Reduced icon and font size */}
-                {Icon && <Icon className="text-3xl mb-2 text-blue-500" />}
-                <span className="text-xs tracking-wide">{skill.name}</span>
-              </div>
-            );
-          })}
+          {/* Scroll Indicator */}
+          <button
+            onClick={() => {
+              document
+                .getElementById("projects")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            className="pt-8 animate-float cursor-pointer hover:opacity-100 transition-opacity"
+          >
+            <div
+              className={`text-sm opacity-50 hover:opacity-80 transition-opacity ${
+                darkMode ? "text-gray-400" : "text-gray-600"
+              }`}
+            >
+              ↓ Scroll to explore
+            </div>
+          </button>
         </div>
       </div>
     </section>
